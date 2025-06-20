@@ -1,6 +1,6 @@
-displayName: "CrowdStrike Identity Threat Protection"
+displayName: "CrowdStrike"
 icon: PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTU1Ljg5OTEgNTZDNTQuMjY1IDUyLjI2IDUwLjk4MjcgNDcuNDYxNiAzOC4xMjcyIDQwLjYwOTJDMzIuMTk3OSAzNy4zMTI3IDIyLjA2OTUgMzIuMjM3NSAxMi45NjMzIDIyLjU4NTZDMTMuNzg5IDI2LjA2NzYgMTguMDE5NyAzMy43MTkgMzYuMjA4NCA0My4yNjcxQzQxLjI0NzUgNDYuMDI0MSA0OS43Njg2IDQ4LjYwOTcgNTUuODk5MSA1NS45ODc0IiBmaWxsPSIjRDgyRTIwIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNTUuMDgxMyA0OS41OTlDNTMuNTMwNiA0NS4xNzk2IDUwLjczMTEgMzkuNTIwOSAzNy40NTA5IDMxLjExOTNDMzAuOTg1MyAyNi44ODIzIDIxLjQ4NzYgMjEuNTYxNyA5IDhDOS44OTMzMiAxMS42NTY2IDEzLjg0MDkgMjEuMTY1NCAzMy43MzkyIDMzLjUwOThDNDAuMjc1NSAzNy45Mzg3IDQ4LjcxMTcgNDAuNjcwNSA1NS4wODEzIDQ5LjU5OVoiIGZpbGw9IiNEODJFMjAiLz4KPC9zdmc+Cg==
-description: "CrowdStrike Identity Threat Protection as a System of Record"
+description: "CrowdStrike as a System of Record"
 address: "api.{{Input Required: API Region (e.g. us-1)}}.crowdstrike.com"
 defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
@@ -27,7 +27,7 @@ entities:
   User:
     displayName: User
     externalId: user
-    description: User represents a user in the CrowdStrike platform.
+    description: User represents a user in the CrowdStrike platform. This is fetched from the Identity Protection module.
     pageSize: 100
     pagesOrderedById: false
     attributes:
@@ -118,6 +118,7 @@ entities:
     description: UserAccountActiveDirectory represents the Active Directory account associated with a user.
     pageSize: 100
     pagesOrderedById: false
+    entityAlias: userAccountActiveDirectory
     attributes:
       - name: objectGuid
         externalId: objectGuid
@@ -199,7 +200,7 @@ entities:
   Endpoint:
     displayName: Endpoint
     externalId: endpoint
-    description: Endpoint represents an endpoint in the CrowdStrike platform.
+    description: Endpoint represents an endpoint in the CrowdStrike platform. This is fetched from the Identity Protection module.
     pageSize: 100
     pagesOrderedById: false
     attributes:
@@ -314,6 +315,7 @@ entities:
     description: EndpointAccountActiveDirectory represents the Active Directory account associated with the endpoint.
     pageSize: 100
     pagesOrderedById: false
+    entityAlias: endpointAccountActiveDirectory
     attributes:
       - name: objectGuid
         externalId: objectGuid
@@ -395,7 +397,7 @@ entities:
   Incident:
     displayName: Incident
     externalId: incident
-    description: Incident represents an incident in the CrowdStrike platform.
+    description: Incident represents an incident in the CrowdStrike platform. This is fetched from the Identity Protection module.
     pageSize: 100
     pagesOrderedById: false
     attributes:
@@ -431,6 +433,7 @@ entities:
     description: EndpointRiskFactor represents the risk factor associated with an endpoint.
     pageSize: 100
     pagesOrderedById: false
+    entityAlias: compromisedEntity
     attributes:
       - name: entityId
         externalId: entityId
@@ -569,14 +572,166 @@ entities:
         externalId: watched
         type: Bool
 
+  Device:
+    displayName: Device
+    externalId: endpoint_protection_device
+    description: Device represents a device in the CrowdStrike platform.. This is fetched from the Endpoint Protection module.
+    pageSize: 100
+    attributes:
+      - name: deviceId
+        externalId: device_id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: cId
+        externalId: cid
+        type: String
+      - name: productTypeDesc
+        externalId: product_type_desc
+        type: String
+      - name: serviceProvider
+        externalId: service_provider
+        type: String
+      - name: serviceProviderAccountId
+        externalId: service_provider_account_id
+        type: String
+      - name: hostName
+        externalId: hostname
+        type: String
+      - name: lastLoginTimestamp
+        externalId: last_login_timestamp
+        type: DateTime
+      - name: lastLoginUser
+        externalId: last_login_user
+        type: String
+      - name: lastLoginUserSid
+        externalId: last_login_user_sid
+        type: String
+      - name: platformName
+        externalId: platform_name
+        type: String
+      - name: provisionStatus
+        externalId: provision_status
+        type: String
+      - name: status
+        externalId: status
+        type: String
+      - name: zoneGroup
+        externalId: zone_group
+        type: String
+      - name: modifiedTimestamp
+        externalId: modified_timestamp
+        type: DateTime
+
+  Detection:
+    displayName: Detection
+    externalId: endpoint_protection_detect
+    description: Detection represents a detection in the CrowdStrike platform. This is fetched from the Endpoint Protection module.
+    pageSize: 100
+    attributes:
+      - name: detectionId
+        externalId: detection_id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: emailSent
+        externalId: email_sent
+        type: Bool
+      - name: status
+        externalId: status
+        type: String
+      - name: cId
+        externalId: cid
+        type: String
+      - name: createdTimestamp
+        externalId: created_timestamp
+        type: DateTime
+      - name: maxConfidence
+        externalId: max_confidence
+        type: Int64
+      - name: maxSeverity
+        externalId: max_severity
+        type: Int64
+      - name: maxSeverityDisplayname
+        externalId: max_severity_displayname
+        type: String
+      - name: dateUpdated
+        externalId: date_updated
+        type: DateTime
+
+  EndpointIncident:
+    displayName: Endpoint Incident
+    externalId: endpoint_protection_incident
+    description: Endpoint Incident represents an incident in the CrowdStrike platform. This is fetched from the Endpoint Protection module.
+    pageSize: 100
+    attributes:
+      - name: incidentId
+        externalId: incident_id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: state
+        externalId: state
+        type: String
+      - name: incidentType
+        externalId: incident_type
+        type: Int64
+      - name: cId
+        externalId: cid
+        type: String
+      - name: hostIds
+        externalId: host_ids
+        type: String
+        list: true
+      - name: created
+        externalId: created
+        type: DateTime
+      - name: start
+        externalId: start
+        type: DateTime
+      - name: end
+        externalId: end
+        type: DateTime
+      - name: emailState
+        externalId: email_state
+        type: String
+      - name: status
+        externalId: status
+        type: Int64
+      - name: fineScore
+        externalId: fine_score
+        type: Int64
+
 relationships:
   CompromisedUserEntity:
     displayName: CompromisedUserEntity
     name: CompromisedUserEntity
-    fromAttribute: compromisedEntityId
+    fromAttribute: compromisedEntity.compromisedEntityId
     toAttribute: user.entityId
   CompromisedEndpointEntity:
     displayName: CompromisedEndpointEntity
     name: CompromisedEndpointEntity
-    fromAttribute: compromisedEntityId
+    fromAttribute: compromisedEntity.compromisedEntityId
     toAttribute: endpoint.entityId
+  # Parent relationships
+  ParentOfUserRiskFactor:
+    displayName: ParentOfUserRiskFactor
+    childEntity: $.riskFactors
+  ParentOfUserAccountActiveDirectory:
+    displayName: ParentOfUserAccountActiveDirectory
+    childEntity: userAccountActiveDirectory
+  ParentOfEndpointRiskFactor:
+    displayName: ParentOfEndpointRiskFactor
+    childEntity: $.riskFactors
+  ParentOfEndpointAccountActiveDirectory:
+    displayName: ParentOfEndpointAccountActiveDirectory
+    childEntity: endpointAccountActiveDirectory
+  ParentOfIncidentCompromisedEntity:
+    displayName: ParentOfIncidentCompromisedEntity
+    childEntity: $.compromisedEntities
+  ParentOfIncidentAlertEvent:
+    displayName: ParentOfIncidentAlertEvent
+    childEntity: $.alertEvents
+  ParentOfIncidentAlertEventEntity:
+    displayName: ParentOfIncidentAlertEventEntity
+    childEntity: $.entities
