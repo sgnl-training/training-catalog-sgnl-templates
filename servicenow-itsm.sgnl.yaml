@@ -409,6 +409,9 @@ entities:
         externalId: cmdb_ci
         type: String
         indexed: true
+      - name: closedAt
+        externalId: closed_at
+        type: DateTime
 
   ChangeTask:
     displayName: ChangeTask
@@ -478,7 +481,7 @@ entities:
         type: String
         indexed: true
       - name: u_area
-        external_id: u_area
+        externalId: u_area
         type: String
         indexed: true
       - name: u_phase
