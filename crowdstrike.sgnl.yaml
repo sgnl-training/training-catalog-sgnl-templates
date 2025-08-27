@@ -90,6 +90,10 @@ entities:
       - name: type
         externalId: type
         type: String
+      - name: upn
+        externalId: $.accounts[0].upn
+        type: String
+        indexed: true
 
   UserRiskFactor:
     parent: user
