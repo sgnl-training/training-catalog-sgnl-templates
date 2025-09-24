@@ -92,8 +92,25 @@ entities:
         type: String
       - name: upn
         externalId: $.accounts[0].upn
+        description: ""
         type: String
         indexed: true
+        uniqueId: false
+      - name: objectSid
+        externalId: $.accounts[0].objectSid
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        list: false
+        attributeAlias: UserObjectSid
+      - name: samAccountName
+        externalId: $.accounts[0].samAccountName
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        list: false
 
   UserRiskFactor:
     parent: user
@@ -587,6 +604,7 @@ entities:
         type: String
         indexed: true
         uniqueId: true
+        attributeAlias: DeviceId
       - name: cId
         externalId: cid
         type: String
@@ -611,6 +629,8 @@ entities:
       - name: lastLoginUserSid
         externalId: last_login_user_sid
         type: String
+        attributeAlias: DeviceLastLoginUserSid
+        indexed: true
       - name: platformName
         externalId: platform_name
         type: String
@@ -625,42 +645,6 @@ entities:
         type: String
       - name: modifiedTimestamp
         externalId: modified_timestamp
-        type: DateTime
-
-  Detection:
-    displayName: Detection
-    externalId: endpoint_protection_detect
-    description: Detection represents a detection in the CrowdStrike platform. This is fetched from the Endpoint Protection module.
-    pageSize: 100
-    attributes:
-      - name: detectionId
-        externalId: detection_id
-        type: String
-        indexed: true
-        uniqueId: true
-      - name: emailSent
-        externalId: email_sent
-        type: Bool
-      - name: status
-        externalId: status
-        type: String
-      - name: cId
-        externalId: cid
-        type: String
-      - name: createdTimestamp
-        externalId: created_timestamp
-        type: DateTime
-      - name: maxConfidence
-        externalId: max_confidence
-        type: Int64
-      - name: maxSeverity
-        externalId: max_severity
-        type: Int64
-      - name: maxSeverityDisplayname
-        externalId: max_severity_displayname
-        type: String
-      - name: dateUpdated
-        externalId: date_updated
         type: DateTime
 
   EndpointIncident:
@@ -706,6 +690,80 @@ entities:
         externalId: fine_score
         type: Int64
 
+  Alert:
+    displayName: Alert
+    externalId: endpoint_protection_alert
+    description: Alert represents an alert in the CrowdStrike platform. This is fetched from the Endpoint Protection module.
+    pageSize: 100
+    attributes:
+      - name: compositeId
+        externalId: composite_id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: aggregateId
+        externalId: aggregate_id
+        type: String
+        indexed: true
+      - name: cId
+        externalId: cid
+        type: String
+      - name: confidence
+        externalId: confidence
+        type: Int64
+      - name: createdTimestamp
+        externalId: created_timestamp
+        type: DateTime
+      - name: severity
+        externalId: severity
+        type: Int64
+      - name: severityName
+        externalId: severity_name
+        type: String
+      - name: status
+        externalId: status
+        type: String
+      - name: displayName
+        externalId: display_name
+        type: String
+      - name: userName
+        externalId: user_name
+        type: String
+      - name: user_id
+        externalId: user_id
+        type: String
+      - name: userPrincipal
+        externalId: user_principal
+        type: String
+      - name: resolution
+        externalId: resolution
+        type: String
+      - name: name
+        externalId: name
+        type: String
+      - name: incidentId
+        externalId: $.incident.id
+        type: String
+      - name: incidentCreated
+        externalId: $.incident.created
+        type: DateTime
+      - name: incidentEnd
+        externalId: $.incident.end
+        type: DateTime
+      - name: incidentScore
+        externalId: $.incident.score
+        type: String
+      - name: incidentStart
+        externalId: $.incident.start
+        type: DateTime
+      - name: device_id
+        externalId: $.device.device_id
+        description: ""
+        type: String
+        indexed: true
+        uniqueId: false
+        attributeAlias: AlertDeviceId
+
 relationships:
   CompromisedUserEntity:
     displayName: CompromisedUserEntity
@@ -717,6 +775,16 @@ relationships:
     name: CompromisedEndpointEntity
     fromAttribute: compromisedEntityId
     toAttribute: endpoint.entityId
+  AlertCompromisedDevice:
+    displayName: AlertCompromisedDevice
+    name: AlertCompromisedDevice
+    fromAttribute: AlertDeviceId
+    toAttribute: DeviceId
+  DeviceCompromisedUser:
+    displayName: DeviceCompromisedUser
+    name: DeviceCompromisedUser
+    fromAttribute: DeviceLastLoginUserSid
+    toAttribute: UserObjectSid
   # Parent relationships
   ParentOfUserRiskFactor:
     displayName: ParentOfUserRiskFactor
