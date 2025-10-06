@@ -19,7 +19,7 @@ type: "ServiceNow-1.0.1"
 #     "sys_user_group": "active=true"
 #  }
 # }
-adapterConfig: "ewogICJyZXF1ZXN0VGltZW91dFNlY29uZHMiOiAxMCwKICAiYXBpVmVyc2lvbiI6ICJ2MiIsCiAgImZpbHRlcnMiOiB7CiAgICAic25fY3VzdG9tZXJzZXJ2aWNlX2Nhc2UiOiAiYWN0aXZlPXRydWVec3lzX3VwZGF0ZWRfb25SRUxBVElWRUdUQGRheW9md2Vla0BhZ29AMzAiLAogICAgInN5c191c2VyIjogImFjdGl2ZT10cnVlIiwKICAgICJjdXN0b21lcl9hY2NvdW50IjogImFjdGl2ZT10cnVlIiwKICAgICJzeXNfdXNlcl9ncm91cCI6ICJhY3RpdmU9dHJ1ZSIKICB9Cn0="
+adapterConfig: "ewogICJyZXF1ZXN0VGltZW91dFNlY29uZHMiOiAxMCwKICAiYXBpVmVyc2lvbiI6ICJ2MiIsCiAgImZpbHRlcnMiOiB7CiAgICAic25fY3VzdG9tZXJzZXJ2aWNlX2Nhc2UiOiAiYWN0aXZlPXRydWUiLAogICAgInN5c191c2VyIjogImFjdGl2ZT10cnVlIiwKICAgICJjdXN0b21lcl9hY2NvdW50IjogImFjdGl2ZT10cnVlIiwKICAgICJzeXNfdXNlcl9ncm91cCI6ICJhY3RpdmU9dHJ1ZSIKICB9Cn0="
 # All auth mechanisms specified below must be supported by the specified Adapter.
 auth:
   - basic:
@@ -357,9 +357,6 @@ entities:
       - name: resolvedBy
         externalId: resolved_by
         type: String
-      - name: shortDescription
-        externalId: short_description
-        type: String
       - name: stage
         externalId: stage
         type: String
@@ -553,18 +550,18 @@ relationships:
   MemberOfAssignmentGroup:
     name: MemberOfAssignmentGroup
     displayName: Member Of Assignment Group
-    fromAttribute: sys_user.sys_id
-    toAttribute: sys_user_grmember.user
+    fromAttribute: sys_user_grmember.user
+    toAttribute: sys_user.sys_id
   AssignmentGroupToGroupMember:
     name: AssignmentGroupToGroupMember
     displayName: Assignment Group To Group Member
-    fromAttribute: sys_user_group.sys_id
-    toAttribute: sys_user_grmember.group
+    fromAttribute: sys_user_grmember.group
+    toAttribute: sys_user_group.sys_id
   UserInGroup:
     name: UserInGroup
     displayName: User In Group
     path:
       - relationship: MemberOfAssignmentGroup
-        direction: Forward
-      - relationship: AssignmentGroupToGroupMember
         direction: Backward
+      - relationship: AssignmentGroupToGroupMember
+        direction: Forward
