@@ -185,18 +185,6 @@ entities:
       - name: userType
         externalId: userType
         type: String
-      - name: businessPhones
-        externalId: businessPhones
-        type: String
-        list: true
-      - name: proxyAddresses
-        externalId: proxyAddresses
-        type: String
-        list: true
-      - name: otherMails
-        externalId: otherMails
-        type: String
-        list: true
       - name: employeeOrgData__costCenter
         externalId: employeeOrgData__costCenter
         type: String
@@ -227,10 +215,6 @@ entities:
       - name: createdDateTime
         externalId: createdDateTime
         type: DateTime
-      - name: creationOptions
-        externalId: creationOptions
-        type: String
-        list: true
       - name: deletedDateTime
         externalId: deletedDateTime
         type: DateTime
@@ -243,10 +227,6 @@ entities:
       - name: expirationDateTime
         externalId: expirationDateTime
         type: DateTime
-      - name: groupTypes
-        externalId: groupTypes
-        type: String
-        list: true
       - name: isAssignableToRole
         externalId: isAssignableToRole
         type: Bool
@@ -289,21 +269,9 @@ entities:
       - name: preferredLanguage
         externalId: preferredLanguage
         type: String
-      - name: proxyAddresses
-        externalId: proxyAddresses
-        type: String
-        list: true
       - name: renewedDateTime
         externalId: renewedDateTime
         type: DateTime
-      - name: resourceBehaviorOptions
-        externalId: resourceBehaviorOptions
-        type: String
-        list: true
-      - name: resourceProvisioningOptions
-        externalId: resourceProvisioningOptions
-        type: String
-        list: true
       - name: securityEnabled
         externalId: securityEnabled
         type: Bool
@@ -316,10 +284,6 @@ entities:
       - name: visibility
         externalId: visibility
         type: String
-      - name: assignedLabels
-        externalId: assignedLabels
-        type: String
-        list: true
       - name: licenseProcessingState
         externalId: licenseProcessingState
         type: String
@@ -359,10 +323,6 @@ entities:
         externalId: appId
         type: String
         indexed: true
-      - name: tags
-        externalId: tags
-        type: String
-        list: true
       - name: applicationTemplateId
         externalId: applicationTemplateId
         type: String
@@ -399,10 +359,6 @@ entities:
       - name: groupMembershipClaims
         externalId: groupMembershipClaims
         type: String
-      - name: identifierUris
-        externalId: identifierUris
-        type: String
-        list: true
       - name: isDeviceOnlyAuthSupported
         externalId: isDeviceOnlyAuthSupported
         type: Bool
@@ -433,13 +389,6 @@ entities:
       - name: oauth2RequiredPostResponse
         externalId: oauth2RequiredPostResponse
         type: Bool
-      - name: parentalControlSettings__countriesBlockedForMinors
-        externalId: parentalControlSettings__countriesBlockedForMinors
-        list: true
-        type: String
-      - name: parentalControlSettings__legalGroupRule
-        externalId: parentalControlSettings__legalGroupRule
-        type: String
       - name: passwordCredential__displayName
         externalId: passwordCredential__displayName
         type: String
@@ -640,69 +589,7 @@ entities:
       - name: roleDefinitionId
         externalId: roleDefinitionId
         type: String
-  RoleRequest:
-    description: "Role Assignment Schedule Request in Entra ID"
-    displayName: RoleRequest
-    externalId: RoleAssignmentScheduleRequest
-    pageSize: 999
-    pagesOrderedById: false
-    attributes:
-      - name: id
-        externalId: id
-        type: String
-        indexed: true
-        uniqueId: true
-      - name: action
-        externalId: action
-        type: String
-      - name: approvalId
-        externalId: approvalId
-        type: String
-      - name: justification
-        externalId: justification
-        type: String
-      - name: principalId
-        externalId: principalId
-        type: String
-      - name: completedDateTime
-        externalId: completedDateTime
-        type: DateTime
-      - name: createdDateTime
-        externalId: createdDateTime
-        type: DateTime
-  GroupRequest:
-    description: "Group Assignment Schedule Request in Entra ID"
-    displayName: GroupRequest
-    externalId: GroupAssignmentScheduleRequest
-    pageSize: 999
-    pagesOrderedById: false
-    attributes:
-      - name: id
-        externalId: id
-        type: String
-        indexed: true
-        uniqueId: true
-      - name: accessId
-        externalId: accessId
-        type: String
-      - name: approvalId
-        externalId: approvalId
-        type: String
-      - name: groupId
-        externalId: groupId
-        type: String
-      - name: principalId
-        externalId: principalId
-        type: String
-      - name: status
-        externalId: status
-        type: String
-      - name: action
-        externalId: action
-        type: String
-      - name: completedDateTime
-        externalId: completedDateTime
-        type: DateTime
+
 
 relationships:
   UserRoleMember:
@@ -778,3 +665,7 @@ relationships:
         direction: Backward
       - relationship: MemberOf
         direction: Forward
+  # Parent relationships
+  ParentOfAssignedLabels:
+    displayName: ParentOfAssignedLabels
+    childEntity: $.assignedLabels
