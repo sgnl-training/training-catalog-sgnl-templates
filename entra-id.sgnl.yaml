@@ -28,13 +28,12 @@ entities:
     displayName: User
     externalId: User
     description: User Entity in Entra ID
-    pageSize: 999
-    pagesOrderedById: false
-    entityAliases: EntraIdUser
     syncFrequency: MINUTELY
     syncMinInterval: 1
     apiCallFrequency: SECONDLY
     apiCallMinInterval: 1
+    pagesOrderedById: false
+    entityAliases: EntraIdUser
     attributes:
       - name: id
         externalId: id
