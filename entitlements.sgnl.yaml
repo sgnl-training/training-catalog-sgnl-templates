@@ -313,39 +313,34 @@ entities:
 relationships:
   # Assignment to Application
   # Links user assignments to applications
-  # AssignmentToUser:
-  #   name: AssignmentToUser
-  #   fromAttribute: assignments.mail
-  #   toAttribute: EntraIdUser.mail
-
   AssignmentToApp:
     name: AssignmentToApp
-    fromAttribute: assignments.applicationId
-    toAttribute: application.id
+    fromAttribute: Assignments.applicationId
+    toAttribute: Application.id
 
   # Application to ApplicationRole
   AppToAppRole:
     name: AppToAppRole
-    fromAttribute: applicationrole.appId
-    toAttribute: application.id
+    fromAttribute: ApplicationRole.appId
+    toAttribute: Application.id
 
   # ApplicationRole to Role
   AppRoleToRole:
     name: AppRoleToRole
-    fromAttribute: applicationrole.roleId
-    toAttribute: role.id
+    fromAttribute: ApplicationRole.roleId
+    toAttribute: Role.id
 
   # Role to RolePermission
   RoleToRolePerm:
     name: RoleToRolePerm
-    fromAttribute: rolepermission.roleId
-    toAttribute: role.id
+    fromAttribute: RolePermission.roleId
+    toAttribute: Role.id
 
   # RolePermission to Permission
   RolePermToPerm:
     name: RolePermToPerm
-    fromAttribute: rolepermission.permissionId
-    toAttribute: permission.id
+    fromAttribute: RolePermission.permissionId
+    toAttribute: Permission.id
 
   # Path relationship: Application → Role
   ApplicationHasRole:
@@ -364,4 +359,3 @@ relationships:
         direction: Backward
       - relationship: RolePermToPerm
         direction: Forward
-
