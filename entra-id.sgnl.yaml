@@ -30,6 +30,7 @@ entities:
     description: User Entity in Entra ID
     pageSize: 999
     pagesOrderedById: false
+    entityAliases: EntraIdUser
     attributes:
       - name: id
         externalId: id
@@ -233,6 +234,8 @@ entities:
       - name: mail
         externalId: mail
         type: String
+        indexed: true
+        attributeAlias: EntraIdUser.mail
       - name: mailEnabled
         externalId: mailEnabled
         type: Bool
