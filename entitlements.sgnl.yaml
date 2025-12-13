@@ -23,7 +23,7 @@ entities:
   # Represents an application or system that users can access
   Assignments:
     displayName: Assignments
-    externalId: assignments
+    externalId: Assignments
     description: "Assignments entity representing the relationships between applications, roles, and permissions"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -31,7 +31,7 @@ entities:
     apiCallMinInterval: 1
     pageSize: 999
     pagesOrderedById: false
-    entityAliases: assignments
+    entityAliases: Assignments
     attributes:
       - name: id
         externalId: id
@@ -49,9 +49,10 @@ entities:
         description: "User's Entra Email (mail)"
         type: String
         indexed: true
+
   Application:
     displayName: Application
-    externalId: application
+    externalId: Application
     description: "Application entity representing systems with roles and permissions"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -59,63 +60,63 @@ entities:
     apiCallMinInterval: 1
     pageSize: 999
     pagesOrderedById: false
-    entityAliases: application
+    entityAliases: Application
     attributes:
       - name: id
-        externalId: appId
+        externalId: id
         description: "Unique application identifier"
         type: String
         indexed: true
         uniqueId: true
-        attributeAlias: application.id
+        attributeAlias: Application.id
       - name: appName
         externalId: appName
         description: "Application display name"
         type: String
-        attributeAlias: application.name
+        attributeAlias: Application.name
       - name: appStatus
         externalId: appStatus
         description: "Application status (active, inactive, deprecated)"
         type: String
         indexed: true
-        attributeAlias: application.status
+        attributeAlias: Application.status
       - name: systemId
         externalId: systemId
         description: "External system identifier"
         type: String
         indexed: true
-        attributeAlias: application.systemId
+        attributeAlias: Application.systemId
       - name: description
         externalId: description
         description: "Application description"
         type: String
-        attributeAlias: application.description
+        attributeAlias: Application.description
       - name: owner
         externalId: owner
         description: "Application owner"
         type: String
-        attributeAlias: application.owner
+        attributeAlias: Application.owner
       - name: environment
         externalId: environment
         description: "Environment (production, staging, development)"
         type: String
-        attributeAlias: application.environment
+        attributeAlias: Application.environment
       - name: createdDateTime
         externalId: createdDateTime
         description: "When the application was created"
         type: DateTime
-        attributeAlias: application.createdDateTime
+        attributeAlias: Application.createdDateTime
       - name: modifiedDateTime
         externalId: modifiedDateTime
         description: "When the application was last modified"
         type: DateTime
-        attributeAlias: application.modifiedDateTime
+        attributeAlias: Application.modifiedDateTime
 
   # Role Entity
   # Represents roles within applications that can be assigned to users
   Role:
     displayName: Role
-    externalId: role
+    externalId: Role
     description: "Role entity representing application roles with permissions"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -123,47 +124,47 @@ entities:
     apiCallMinInterval: 1
     pageSize: 999
     pagesOrderedById: false
-    entityAliases: role
+    entityAliases: Role
     attributes:
       - name: id
-        externalId: roleId
+        externalId: id
         description: "Unique role identifier"
         type: String
         indexed: true
         uniqueId: true
-        attributeAlias: role.id
+        attributeAlias: Role.id
       - name: roleName
         externalId: roleName
         description: "Role display name"
         type: String
-        attributeAlias: role.name
+        attributeAlias: Role.name
       - name: roleStatus
         externalId: roleStatus
         description: "Role status (active, inactive, deprecated)"
         type: String
         indexed: true
-        attributeAlias: role.status
+        attributeAlias: Role.status
       - name: description
         externalId: description
         description: "Role description"
         type: String
-        attributeAlias: role.description
+        attributeAlias: Role.description
       - name: appId
         externalId: appId
         description: "Associated application ID"
         type: String
         indexed: true
-        attributeAlias: role.appId
+        attributeAlias: Role.appId
       - name: riskLevel
         externalId: riskLevel
         description: "Risk level of the role (low, medium, high, critical)"
         type: String
-        attributeAlias: role.riskLevel
+        attributeAlias: Role.riskLevel
       - name: roleType
         externalId: roleType
         description: "Type of role (standard, admin, service)"
         type: String
-        attributeAlias: role.roleType
+        attributeAlias: Role.roleType
       - name: createdDateTime
         externalId: createdDateTime
         description: "When the role was created"
@@ -172,13 +173,13 @@ entities:
         externalId: modifiedDateTime
         description: "When the role was last modified"
         type: DateTime
-        attributeAlias: role.modifiedDateTime
+        attributeAlias: Role.modifiedDateTime
 
   # Permission Entity
   # Represents granular permissions within roles
   Permission:
     displayName: Permission
-    externalId: permission
+    externalId: Permission
     description: "Permission entity representing granular access rights"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -186,58 +187,58 @@ entities:
     apiCallMinInterval: 1
     pageSize: 999
     pagesOrderedById: false
-    entityAliases: permission
+    entityAliases: Permission
     attributes:
       - name: id
-        externalId: permissionId
+        externalId: id
         description: "Unique permission identifier"
         type: String
         indexed: true
         uniqueId: true
-        attributeAlias: permission.id
+        attributeAlias: Permission.id
       - name: permissionName
         externalId: permissionName
         description: "Permission display name"
         type: String
-        attributeAlias: permission.name
+        attributeAlias: Permission.name
       - name: permissionStatus
         externalId: permissionStatus
         description: "Permission status (active, inactive, deprecated)"
         type: String
         indexed: true
-        attributeAlias: permission.status
+        attributeAlias: Permission.status
       - name: description
         externalId: description
         description: "Permission description"
         type: String
-        attributeAlias: permission.description
+        attributeAlias: Permission.description
       - name: appId
         externalId: appId
         description: "Associated application ID"
         type: String
         indexed: true
-        attributeAlias: permission.appId
+        attributeAlias: Permission.appId
       - name: roleId
         externalId: roleId
         description: "Associated role ID"
         type: String
         indexed: true
-        attributeAlias: permission.roleId
+        attributeAlias: Permission.roleId
       - name: permissionType
         externalId: permissionType
         description: "Type of permission (read, write, delete, admin)"
         type: String
-        attributeAlias: permission.permissionType
+        attributeAlias: Permission.permissionType
       - name: resource
         externalId: resource
         description: "Resource the permission applies to"
         type: String
-        attributeAlias: permission.resource
+        attributeAlias: Permission.resource
       - name: action
         externalId: action
         description: "Action allowed by this permission"
         type: String
-        attributeAlias: permission.action
+        attributeAlias: Permission.action
       - name: createdDateTime
         externalId: createdDateTime
         description: "When the permission was created"
@@ -251,7 +252,7 @@ entities:
   # Links Applications to Roles
   ApplicationRole:
     displayName: ApplicationRole
-    externalId: applicationrole
+    externalId: ApplicationRole
     description: "Junction entity linking Applications to Roles"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -281,7 +282,7 @@ entities:
   # Links Roles to Permissions
   RolePermission:
     displayName: RolePermission
-    externalId: rolepermission
+    externalId: RolePermission
     description: "Junction entity linking Roles to Permissions"
     syncFrequency: HOURLY
     syncMinInterval: 1
@@ -315,36 +316,42 @@ relationships:
   # Links user assignments to applications
   AssignmentToApp:
     name: AssignmentToApp
+    displayName: Assignment To App
     fromAttribute: Assignments.applicationId
     toAttribute: Application.id
 
   # Application to ApplicationRole
   AppToAppRole:
     name: AppToAppRole
+    displayName: App To AppRole
     fromAttribute: ApplicationRole.appId
     toAttribute: Application.id
 
   # ApplicationRole to Role
   AppRoleToRole:
     name: AppRoleToRole
+    displayName: AppRole To Role
     fromAttribute: ApplicationRole.roleId
     toAttribute: Role.id
 
   # Role to RolePermission
   RoleToRolePerm:
     name: RoleToRolePerm
+    displayName: Role To RolePerm
     fromAttribute: RolePermission.roleId
     toAttribute: Role.id
 
   # RolePermission to Permission
   RolePermToPerm:
     name: RolePermToPerm
+    displayName: RolePerm To Perm
     fromAttribute: RolePermission.permissionId
     toAttribute: Permission.id
 
   # Path relationship: Application → Role
   ApplicationHasRole:
     name: HasRole
+    displayName: Application Has Role
     path:
       - relationship: AppToAppRole
         direction: Backward
@@ -354,8 +361,10 @@ relationships:
   # Path relationship: Role → Permission
   RoleHasPermission:
     name: HasPermission
+    displayName: Role Has Permission
     path:
       - relationship: RoleToRolePerm
         direction: Backward
       - relationship: RolePermToPerm
         direction: Forward
+
