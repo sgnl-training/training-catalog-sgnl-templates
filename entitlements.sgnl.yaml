@@ -73,6 +73,7 @@ entities:
         externalId: appName
         description: "Application display name"
         type: String
+        indexed: true
         attributeAlias: Application.name
       - name: appStatus
         externalId: appStatus
@@ -90,6 +91,7 @@ entities:
         externalId: description
         description: "Application description"
         type: String
+        indexed: true
         attributeAlias: Application.description
       - name: owner
         externalId: owner
@@ -100,6 +102,7 @@ entities:
         externalId: environment
         description: "Environment (production, staging, development)"
         type: String
+        indexed: true
         attributeAlias: Application.environment
       - name: createdDateTime
         externalId: createdDateTime
@@ -137,6 +140,7 @@ entities:
         externalId: roleName
         description: "Role display name"
         type: String
+        indexed: true
         attributeAlias: Role.name
       - name: roleStatus
         externalId: roleStatus
@@ -148,6 +152,7 @@ entities:
         externalId: description
         description: "Role description"
         type: String
+        indexed: true
         attributeAlias: Role.description
       - name: appId
         externalId: appId
@@ -159,20 +164,24 @@ entities:
         externalId: riskLevel
         description: "Risk level of the role (low, medium, high, critical)"
         type: String
+        indexed: true
         attributeAlias: Role.riskLevel
       - name: roleType
         externalId: roleType
         description: "Type of role (standard, admin, service)"
         type: String
+        indexed: true
         attributeAlias: Role.roleType
       - name: createdDateTime
         externalId: createdDateTime
         description: "When the role was created"
         type: DateTime
+        indexed: true
       - name: modifiedDateTime
         externalId: modifiedDateTime
         description: "When the role was last modified"
         type: DateTime
+        indexed: true
         attributeAlias: Role.modifiedDateTime
 
   # Permission Entity
@@ -211,6 +220,7 @@ entities:
         externalId: description
         description: "Permission description"
         type: String
+        indexed: true
         attributeAlias: Permission.description
       - name: appId
         externalId: appId
@@ -228,6 +238,7 @@ entities:
         externalId: permissionType
         description: "Type of permission (read, write, delete, admin)"
         type: String
+        indexed: true
         attributeAlias: Permission.permissionType
       - name: resource
         externalId: resource
@@ -238,15 +249,18 @@ entities:
         externalId: action
         description: "Action allowed by this permission"
         type: String
+        indexed: true
         attributeAlias: Permission.action
       - name: createdDateTime
         externalId: createdDateTime
         description: "When the permission was created"
         type: DateTime
+        indexed: true
       - name: modifiedDateTime
         externalId: modifiedDateTime
         description: "When the permission was last modified"
         type: DateTime
+        indexed: true
 
   # ApplicationRole Junction Entity
   # Links Applications to Roles
