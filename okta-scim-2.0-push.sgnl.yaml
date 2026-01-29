@@ -1,0 +1,257 @@
+displayName: "Okta: SCIM 2.0 Based"
+icon: PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMzkiIHZpZXdCb3g9IjAgMCA1MCAzOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSIzOC41IiBmaWxsPSJ1cmwoI3BhdHRlcm4wXzEwOTBfMTApIi8+CjxkZWZzPgo8cGF0dGVybiBpZD0icGF0dGVybjBfMTA5MF8xMCIgcGF0dGVybkNvbnRlbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPgo8dXNlIHhsaW5rOmhyZWY9IiNpbWFnZTBfMTA5MF8xMCIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxIDAuMDEyOTg3KSIvPgo8L3BhdHRlcm4+CjxpbWFnZSBpZD0iaW1hZ2UwXzEwOTBfMTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNzciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBR1FBQUFCTkNBWUFBQUJRUWNHcUFBQUFBWE5TUjBJQXJzNGM2UUFBQUhobFdFbG1UVTBBS2dBQUFBZ0FCQUVhQUFVQUFBQUJBQUFBUGdFYkFBVUFBQUFCQUFBQVJnRW9BQU1BQUFBQkFBSUFBSWRwQUFRQUFBQUJBQUFBVGdBQUFBQUFBQUNRQUFBQUFRQUFBSkFBQUFBQkFBT2dBUUFEQUFBQUFRQUJBQUNnQWdBRUFBQUFBUUFBQUdTZ0F3QUVBQUFBQVFBQUFFMEFBQUFBTWVjcmxRQUFBQWx3U0ZsekFBQVdKUUFBRmlVQlNWSWs4QUFBSDQ1SlJFRlVlQUh0WEFkOFZGWFd2MjlLSm8xMFFncnBoRlJxS05JVGNWZEVrVjBSRnltQ2F3RlovWlJQV2FScGtPNzZJWUlWd1k0TlhWRVJ4QUlCUVlwU0JGSnBnVUJJU0NHOXpzejcvdWZOVFBMYVRDWkJWNy9mbC92N0RlKzkrMDY1OTV4enp6M24zQmNZNjJ5ZEV1aVVRS2NFL3M5SWdQdmRSaG8vLzBtbTBhMWt2TWt5QkU3REdNOHltSS9mV0hiZ3YrdXZhMXdKQy9velRydVo4V1lQeGpnejQ1Z1cxeXRNWTVqQVRpMHF1QzdhdnpHeTdqZW1iNTg4eDQyRWtGcmY4enhqR20wZlZsMGVpYzdzMWhjZHVPTzVvVkIyUEdOTlZtVFE1blRkR1RNT1JFZW5RdFJGU2hxUU5SNXJwTWttUk5tNzlqeHlIR2lic2VLSWhZME5yVVJPWkFIdElmaWZnNFdmNkd4L0pBbDBLdVNQcEEyTXBWTWhuUXI1SFNYQWFXd2J5dTg0Q01lcy94K3RrRC84Zmk1b3F2MWg3OFNKV25heVJ3d0NsZ2hFTFo1TXd5Rjg0Y3VaVnAvSFRxUmZkYXovNjM3THNZUkZvNW5aNUlPSUdXRVVOUTBIeDJ0a1d0TmVkbkxWTlV1ZjJyOVlIR2JqQXl4eFFYMHJMc0dab1NsZEU2dXNQY0F1UGU5Yy9wT1VIc1RNelpHTTU3eVE1dENxSzJPTnByUHMzT3BLZ1hOa3VpdHpOZDdBdEVaWGpBL3ZNVWJlVk12Y3lnNnlJeHVhQlJnNy96aXZrS1E1Zm96M3ZJdGxzc21nbndnbCtFSWhsaFhHczBiV2JDeGxpVS92QnVPM1dmYXk3K3p3dTc3dXBNVnpHSy81RjlOcXdaZmtZRzBhUFdPbWhybDRlczdXcGJoU0FzcHB4MEE0WTRBcVJrYS9ubWRlN3ZjQVo3TUN6OWFSbE83Q1RNM2p3UHR1S0hZSThod2ZaalpENEpSemNyWE1WWE9WSmFYdkFzeGJNSTVJeHZSdmd3dGVDbzFqbktHWk5ZVGNqcWV2clgycUYrY1VFci9vTmdoaUpSZ25JL3VGTENpbXQ4N0pjakZBTjZHd3ZLbTRUbUpKaXo1bHhvYjVMUGU1ODZwY085S1p0SGdTTEJLWnZWR3FEREJGdmdHcjU0NjJTZFpXRllBSUpiQWNWb25aSEN6cEV6OGtQVGtRUEZZaGNiMVJtRFpobTBXR3pyTXVtSGNYd0pEbm1BWVpsVEMrQ2JJVjZaM3hlcndMRkpOVnUyOTdEMGxjTko5cE5KK0JlTEl3Q0xFeXhCUkpVVFJJc3hFRDBmNk5hVDIrWnZHTFU4UWdIYjVQVGsrRlpiK0VpYnBJSndtS3RFak5wdmtzYzltdUR0TW5SSTVjcjBwTFdEaU5NWmVkNEF0bEdIR2hIK1lxYjRLaGtwSjRyQm91REZjWkJKNTVtNXVWdlJJOU9sWklVdnFURU1RS3JBaWRaVldJTUIzZEN0YkQ5NFJyMjhxUzV2VnhCTnJtdTloRkNiRGVOeUVFUDBoZUNzN0JWZkdtbDFqMmloZWtMMzZscDRURjkwRGhtOERiVjFDRVUyUko4TEp4T29WbkFiS3ZrT1Q1Y0ZQbUpSTDNKQ0dNZFV2V2FhOGFRWmJFV0hmR0RKdmdXeUhNRHJTWUp3S1pqbjhQbUpFS2c2QjlnemR2WS9xbWVlMmlMSXlaeGkzNldkSXhxZnRPWE53UGptMDkzSkJlWGNCdHpMOWRnMm9GbGc3QzFrOENOSnRYWThaS0YwSHVWd00wczZrZWd5MkhRdlJZQ2Y3WVk3UUtLeUtsY0M0cEVDWnR1UE50NUIxY2VXeThsclZPa1lyQnRCR0M2eS94MTRUTVlhL2t1V1BNckozSlRqeFg2NENlN0JWVmZybENwZXZnbXpDdDFqMkllUE9tTllEMVFyUWdweUdhUDdQTW45UEE0RGg0RWNFSVpmRHRlMVJmSVdiamRBd21VV0dWSkFoT1d3NXBMR2NtYmdock5DYXhKaE50OU9QUTk0VWdLRktZdUZrMnZ3ZFl3dHhZY2JlZGV6MkRlb1YzN3NabFVNWTRwVExvTlY4TWc1ak9jdE1MN2RCUmRrTmVHUHdMckw0cG1UVTA5WmI4akhYOVdkYUs3MXVRM016ak1mOVVoWUFWODI5T1lzYjZKRVMydHdMM1UySFZ5ZWZmUXRTNUcrVUtTVWwzWi9WUVNHdEVZcUZFUzV4eEZ5R2dTU3huNVFFWitSMTQzc0VTRnk3QW9KWUNWNlJvR0R5bnhRb3lUQUxNVWhtZTZKRVdodG1MOGRxVnlEVXV3NHBuTWw0VXlSQ2s0QjY1Um1ZeVBzaHlWNTRVSVR0eFMrUFE3MkhubGxseUJYc1lxZWs2ZHRYMEFJQ2xFQzN6NXpIL3BmTDVmd1BnYnpEdU9aai9zNWkvVXE1U2FuYWZSSUt6d2pRMTBwa0JWb2Q0WTZMQmNYVll2VE5VbE5GS1BHczVBZ0QrRlV5OHRZL3VTTGtjZHlzalYrQ29DVHk1MnpHcGg2QWM1ZGhvOGZEOFBDampDMGRrN0w3am5CRFVwY2Fld0I4a05VanIvRG56dlNyS2FHV1h2ZXg1UEt4bHRMOTFzQ2tuYmRMRC9jZ28wbEpsL0w5WjdqTzcyK1NqMFQwTFlWNnhXTE1WV2dnSitYam0waERTSmo0cFQ4MFhDeTZIclVQU3VhNU5HdGNENE1MMWgvVjB3U0JhcVZqbXY5V3AwSnIySHQ1Y0lKbC9LNlUyNzVRS1llWTBDRlNHaU1HWjJCWlpwL3BqWnZwRkRHWXZ5aEdpOStRdWVHK21kNGtRZFRwL0t3akVmSkRwNmhjQVNTUXA1MGs0RGNuaHBGRVJPWUlsci9uRUtSclpLOGdZTTJpUDcwaFRLb1RubzVUdWl0VXdrK21NOHd3MHArUXVHS3VPUkJuZ1BBMFJwT0MvK1JQdGk2aEUrTzI1Tlp2VnN1azZKTHhublNmRFp6a1BLNFZVS2tRSWRhVkFFSzRKTlJ6NEVpZWJ1ZVV3VzRwQW9YRkhtcG5DU2MxZldPemN2czZoeTFjNFlXRWY0SzBSbkNNaW5HUnAyeURiTy84R0c2TGt5bE1oMDNGVFVRaSt6cEFzV2ZJUXZDYzIwNjZPU1luZm1pT1Zqb1hvR0t2RVVNN2ZFeTdxUUhyREd5eHBibERiZUJ6NEVJNm8wWng0UGxUVVkrZFdXNjN5d29PWjJ6Ri9xdXNwR3ZoelNETGJhR29LK1Vsd0wySkVYcXRsT3UxTjRpNjc5NzJmd0tjMzVwSFNoRW9RUmlQNkw5ckZzNzJnL1lJU1Qza1Rra3h0UDRUUDd5THo5NVMvbGp4citFdVF2blJGMHdjUEhFdVZ3S2s5Y0h5K3NsdWpRV0h4VDhwK2xaNGU2d3lZK3lpcDI3ZkJjWkNONDZaVUNJZjZrN3dKYytPblF4QnRXMmV6MjkwSVd4TWtBeUxyMUdqUHMvbzZDTXBCbzdNVjNyd00xb2g0WGdzRkFrL2NLTW5rWUJpODhWV1dtcXFpTlN0d28vRTBGa2lwWktWYjlQTW5sclI0bUppazRwNHpvd0pnbGltVEhrM1RXTStGS3BZdm8rQlNncVJTQThPUmtyQk1oVzh6eWxSUmlIWXZKbk5adWtySUozT1JzUEFYV2ZjNWJuaFFiL0h6aDhBeXFSZ3BvMHRiaDNrL3kxOWJvWTVJdmJTS3REamc0bDltMlV2WDR2RUpURXdKYmxIS0ZGWThFdUcxWEdOVzhEUFBYc0tibjRXemloWUtnZ3R6aDhKZlpBa0xnbHU2NVRkRzAwbmducGZ5cHZscnd1QWxYbUtDQjVBaldaL2pGL2ZDM2IvQVEya3NGUHB6RFBKSlY1bFVLejNsSmx1U1VjTzZqb3FGMnhnZzFiSXdxRVJtY0JuQXVvM0lZVmRIUTNnWjFNbFkzM1FmNWpkaU1penlkVEJGbENMMzN4b2p5Z3R6MmRXOStRSTgvZE4xeEJSWWV5d1VaZTJDUWpoTk5kTTB2OGxLOWxleWtyMkhNUTRYakdPRVpMVVJ0REE1elJEV2RXUVQ0SDZ3RXBCZUFrZmhtWnZRU3A5ZWs5dlMwU3BQWXdFajgxaEUvR1YyNVlodEFBVEFXT20rZWhhWUdvYXhESlB5QlJpbmljZXh4a0FXT0R5WGxTUmcvbGJjNkhuZUxEajFUc3o5VFFDRlNmRXNaQzB5MFhSbkFjWkcxbTFBTmlzWkF3K1FJUk1Vc0czZ2ttdENlakxUbVBlaFh1U3RGSzZnd3hyTTdXY3doaVdaM1RISlpPQW5DYkJDdGkyaVJqbW1HVlZaOStJN0pNZVhDZk8vUWtZL3RqVUpKSVZvQ3huWE9JUmxycjVvb1lEajRvUzQxK0R1N2xQVXRHam9HbTB6TS9FUEkzdmVJT0pvdVkxYjNZVnBhMGhaZmFTR2hSNUxvdGVJT1J6QVJudEs4QVk4UXRYc3BhL2lKWThTU0N5TTZ3RG01MjluL25YQS9RbHpQNGNyblJvbUFhMjM2dnpsQXlQZUhKY0RQSGdoMDJtV3RSeFZpZGFtcmhCNm43am9hUXc4WFNrSUs3SkEyTHI2eUYvS0ZTR0E0YjBHeFVpTitjL3M1TklqVmt6THhTbUZBSlJxYTNXbWoyR2R0NnJYdHJSMUVNeDBaTkhLeEMxeDRYZ0lhd3NVQXF0UUdLTkZNWUpieERqTnphWE1wRXRnZWVtbHdnQVRGdjhUQjNPcjI1NC82TkxjVmVjdm1YSHJnOENUREJDL3pHY2tPckJLdEJXMjVjNU5SNzV3QjlPZ0FxL1dTQW5reittbk9oaUJJVTZ2elhNVnlsQ2paNi92U0hvZHp1dnZoVFg5cElpK2hFOUZzVUo1YmdQcnRYaVVna1RXOHMraHlHY1ZlRGJBbGprMHdYQ1FXcnNhc1NLc3JWNjdEbVAvb3UzNUkwZFNuVC9Sa2NqYVJ0bXFRSktmc2x4dlh5RWtDSjEyQnF4cmwyVlFkb2kzc21tOUl3dlE2SXl3M0NkWTF0STNXbDkwOE83TXloSzR6Nm5JSTg1WTNJMklqaUFNZkhCaDByeURLRkNaT0xvV0xvRUVYcktVNSt6TmdheWN1U0c2YTFWSWZub0Rhekxlai9sL1oxY3BvbUZJYjRtUGhwWk5HUXhDK3FxTko4ZlE5Rm1QaTVZMnhsY0VmNjJXSDBnWWtDSm9SZEVoRUNxam1jdlhTRjVmejBQT3lqelFuSVpsZmxVeFNWSUtadzdIKzgwc2VWR01oQTE5ZHBPWi9TamVMUVJlalFQRkdGaXpXVnJhSVVPb3E1NElwYnhxTVRCbDhDVGhKZXhyOEk2Y3RncThIc01YUm1Qd1VOU2V1cFpqaFJDMzQra1Y4SE96Y1RjT1ZyUUR4R3NFQnFUNWxoODJLcXFLYUhRRjJHVFg0VGNjSytNOTZXQmxUNXpHWktGRG01enRoeGsxMmwzLytDT0Y1UWV4RXU0RFBNWUFIS0VTUWxQQWp6NlAwdWh4YktERHZpRnZXMHdZendvb2JUUlcyUmFNdGRJaUpOdjBZZEZVRE5Sb0VNVElHb1hxV1VzZkF1NWZzWEh2QWx5RFpkeUVhMTF4Z2h3SVg0dXdudnNBaGNnMGx2WE1lcGE3SEtFMyt3dGVITExnMEppdHpTSTdoYyt5dDRadGFNcHIwZ0s0QmUzdDBQNk5qRE1oVWRMQUFlUHZPVGp6bDB6Yi9EMDdnUnpBbVpiMDFNM3cvYk5ndVJab0RoSTI4eGtzSndjZkxFQ0FqbHJpNGxsWUtmY0JWd3dIQ1hHVlF0U1Z1eXpYRVRwTFhJeW9pRTJBY2hBb21PT0FCMGxwanpKRDAzUjJmRlcrZlZ4RWZmRTlCaUU2L0JzczRDYk1PUXBSZXpNVW1Rc2xZTDlwL294bHJsUVdGdVAraVlqUGdKWEc4TkdFdVEvb3c0MXdwL0M4RXNjSlcrM3o2M3pUS1lGT0NYUks0QTh0QWFmMkVKN25OVHQyN1BEODRJTVBRZ3NMQ3dQMkh6N01FdUxqdWFTNHVKcUlybDJMbDYxWlU4SnhITzBsdjFvRFQ5M0tsU3U5anh3NUVsUmFXdXAzNk9oUkZoMFZ4UWFucERUaGkrakNEOTU0b3dUTUdzRVh1N20wcGFlbmExNTg4Y1YrRlRVMTd2UUcyeTAzYU1TSUszdS8vZmEwRkZMNkZKMlM0bDJZbDlmYjJJemNTdGI2OWVwVmZmanc0UlBnWjkzMFpBQU9Ib2NQSHg3Kzg4OC9SMUxHSWdQandrTkM4cytkTzNkUjFxLytDS0ZveDQ4ZlA3UnYzNzR2aG9hSEgvTUxDQ2p4OHZHcDBSa01OZTVkdXRUNCt2dFhkQXNLdWhBZUViRnI4SkFoS3lkTm1qUVVPQ2cvZDd5dFdyVXEvSVpodzJiRkpTUjhGaFFTa3VQdDQxTnE0K25tNFZHRE1WU0I3OFdJNk9qOS9WSlNWazZZTUtFM0dZeVk0N3AxNnd4Ky92NkhkQzZHR3IzQnRZYXUwVEV4cDE1NTVSVUVJZlpicjE2OWhoQVBtcC80cDNWeHFRa0lETHc4WThvVUtoNjJxL0VGQlc1eDhmRzdpWWFZSnQzclhWMXJ3c1BENXp0RjhMWFhYZ3ZvM2Jmdnl6Nit2dGRjM053YVFkQUVJanl1dkhERlBWM3hNK05uTkxpN04wSlFsVW5KeWR0bXpKZ3hsaXpjS1VaV29JMGJOL29OR3pic3FkQ3dzTE5RZGgxb05oTnRyWWdubm0wOGVmU2JyRHl2RGgwK2ZOWHUzYnRidm1naGhmajYrWjJFSW5nb1JQaTVlM2lhVWxOVFYySmNkcjFDVWxMU01DaWtoWWVZSDRUSDkrN2Rld3Z3a1dnNDMwYU5HdldBaDVlWDBTWTNPYzJ3c0xERmJWSjcvZlhYb3lEWVl6UUlOVUppb3VKN2dxVWZGTU5qVmIyN2Z2MzZrRGFaQVdENjlPbWpzY3F5WGQzZGVZMWVyeW9RTVIveHZSYndpY25KQndwZ2lUWmVWb1djRUN0RUMrV0VkdStlLy9ISEh5dHpEU3VpSTRYUXZMeDlmYzIzakJ1SHZNSzV0bWJObXREdTRlR1g3YzJKNUN0WGlHU3BFeHVhMk5xMWF6ZmxuVG5UMTR4YUVYeW1jOXdCUmJEMHE2eXVacGs1T1ZOZmZ1V1YzY3VYTHcrMlJ3RFdwaDAzYnR5TTdWOS8vZm5sSzFmaWpTWVRRbnJGa095aG80aHNacjYrdnRWREJnK2VqWWxoYTdIZmFCYTF0WFVSVzdac0dXSWZ5djRibWxkMVRRMlhrNW41elBidDIvR0pxZU9HdVduZWYvLzlKNitXbElTMFowNksyZi85L3ZzZlBIL3hZaHBOVnE0S01CR0VRTy9vbm41cVRZUEJFd3cyeDR0WTVuYS9GTHpsbGx2dU9IajQ4S2F5OG5JUGU0b25EamErWXA1MDcrcnF5dUppWTUvYnRHblRNYlZ4aVB1SWZsMTlQVHR6NXN3RTRDcm1MWWExZDA4MGlxOWU3WVY5VGxJeVY0T2ZOV3RXLzRzRkJmY1pqWXBrWEEyOHBVOHlzRjkrK2NVakx5OXZaa01EcWdOZ0xtOWVYYm8wQlFjSDU4VDI2SEc4YTBCQWxvK1hWNVZlajQvREFVZ0NzalZTUm1CZ1lOV1lNV01leFFxb3MvV0xydzgrK0dEL0V5ZFBiaWd0SzRNQlNZWWhnTm5vdWJxNHNDNmVuczBCL3Y1MW5oNGVqZTd1T0g3QjJPaDlSSGo0ejU5OTlwblQ5VElUVnVEVnF5Vi9mdXV0dDlxMGNQRlliZmZFdDZHeGtaMCtlL2FKcFV1WFJ0bjY1VmVNVGI4N0krT1o4b29LTjdXNXllSEZ6NUtOZDk3Q2hiMnZYYnNXcDZhTWlMQ3dQY09IRFh0ODJiSmxXZDI3ZCtmejgvUFpzODgrRzVLWm1abDI2ZkxsdjhOeWh0SmdxYm01dWJHK3ZYcXRnQy9QeGo0aTVpZmNuejU5Mm5ETHJiZXVMeTRwOGRIaSt3bDU0NkZRTHk4dlBqUWtaQWNpclkrd0o1M29FUkhSa0pPVG80T3lZeTlkdWpTMnFxYm16NzJTa2g2SDRtdmsrUGFlYVY1d3A2R3Z2dnBxT0dBcTdNRTU2aWNCWTBVSGZQSEZGMDlCOFBlQnBpSU0vaXRhVVhIeExXUTBhckowUkYveXJ2L0FnUS9ReGlyWk5MR1orUWNHbGozeHhCT09MTUlGSzJGeVpGUlVGdUgzakl2N0FZTnBpWG9rVFBDQWxUTVRrWlJxd0VDYloyUk16Rm1Fc3hTcHFSN0dvRitEemJrcnJzcGxEUHBxbXpwRlc3VEorL2o2TjR3ZVBicW5mRXowN0doVGw4c0VSdEk0ZGVyVUVYSTZ0TDlFUmtkbjBqekVPR3IzYXB1NmhONklVYU9la29kOUZDSEVKU1ptWWZKdGZzS3llZk5tWHlSQlN5ZFBuRGhJUWxqMFFPRXRjb0xUR2pzRGp1N1I0OWlUVHo0WkxVSnA5NjA5aGJoQUtYMzc5LytJNXpOVkZlMnNRa2k0SlBDNHVMajkyTC93SGJDbFRjUmZLQThmT1hLWm02ZW5xckhKbGFLbUVJbnpGalpyRzNYUnRmTGF0Y0FGQ3hhRVVRWXM2bGJjVHBreTVkb1BQL3p3MVB0YnRoeFd2TFIydlBQT096ZkJWZldRbXpZVXpueVJCSTVKUzNzUW0rWTVlL2pYMDYvRGZ1ZnU2dm9seHlXMXE2cEFZMU5ybDR1S2huNzQ0WWRUOEU2WWpwK2ZYeHoyNEljYThSL29pRjBWNGF0VFVGS1ZDTGlocnE1VXpweDg1clhLU3Y4ZE8zZStuSnVibXd3cjhFeEpTYUhrU0M1VGdUb0dZcGMzYUhNb3ZZeHZ4RjRqSGpBaFVuRFFzMGVQalM5dDJFQm5DTDlKbzRnSGU4aElKTDFPSjNja0R6ZmtDOTVlWHMyVUJ0Z2FqYit1cm81bFptWE5tenQzYmplaWVmRGd3YWV3Qi90UmxHbHJoTy9wNmRuZzZlWldJWmV0RFVaOGxTZ0VtM0dlQzF5VUhKRW1Bc1pwMysvYXRSdGg0NGFBYnQwbUlrcUtUazFOOWNReXArVXZvU05tSUw1SEVPQ0p6ZmdHT1gyYXFJZUhSL21nUVlOZWQ2UlFNYTJPM0pNSHVITGx5dFJ0MjdiZEJQeFdxVGtnUm1QdGdzcEIycWhSSDBFMkp2SFloUTMrMnJYSWpMMTcvMnZ2anorT3ZGQlFjSWRZYVVRV1FRc2ZFeFgxSVJDUHlvMVFqYTFFa0dQSGp2M0YzYzJ0UU15VWtJZ1E5WlZDKzZleXMrOCtzSC8vNWkrM2I5OVhjT25TWm1qL0llUVRmYkJ5dkswclI0MlAwSGYwNk5HSXh2cDZSZlpPOUdHQis1SFpYckNML0N1OElENVZWZFZ1cHpJejF5eGN1RXd4RG5zc0lHU1hHMis4Y1VOWWFHaUdYS2hrckNnT3pqNjRiOTlyU0J6MTR2ZGtBQWpYaTI0Zk4yNUpiVzJ0VXdtSlJDSHo1ODh2UmJId1RSY1hGMFVvUjRPbHBVaUtxVVdDVlZ4Y0hBU0x1UDFrWnViYUE0Y09aWnc4ZWZLVGdJQ0E2VWlJQXUwcEJxRnl1Rkg0M3cra1U5Y2g5SVVWL29USmlFOEFwVUMvMGhNSjdFcFJjZnkyYlZ0V1kwKzBHd21LMldFcGFlQm1xL3YzNjdjSXVWaWRlQlVRdllyS1N1Lzhnb0lZc1RKSVRqQnVVM3pQbml2QUp4OHJSVFdRRVBPaGU0bENRSkIvZk02YzlZai9EM0VhaldSNWloR0pzUzNoYVVLcEdwYmhkZnJjdVp0K1BIanc5UjFmZi8ydHY3Ly9YUWlURlZGWmZWT1RONVZIeEFNbnV2U3MxZW5PaTNuOGx2ZGsxV2ZQNTAvKy92dnZaeEI3WjNoVlYxY2JzSUVmaW9xSzJ1aWkwN1Z1SmtRQTQxZWJVM0JRMFA2MzMzNTdrelAwYlRBU2hWQW5DbjFsRXlkTW1Cb2JGYlVObXhrbFR5WTVNeHV5N1dvYkVKVW1MaFVXOWtZNTVOMDllL2FzUldUV3pRWkQxK1RrNUs3d3c1S3Nudm9KSHhiVlFQZi9pVWI4NnV2ck9SalJzamx6NWtRNXl4TjQvTFFwVTFhZ1NwRkpLOEJlb3pjK1BqN2xnd1lPbk5kV2pVMU9RNkVRQXFDd2M4T0dEZFBpRXhLV0JQajVuVEFZRE5ld0lpZzA0bWt5OWhxOW8xOU5iUzJYbFpOei82NWR1NTdHaEZ1cXNFVlhybFNiNEZmbE5NalhOalkwT09VKzdQRnVYNzhsZzI1dWFIUy9VRmpZK2kyV0UwUWVlK3l4NGg0eE1Vc1JoRFRZVTRvTC9yZ3BPaUppNDN2dnZXYzMvTGZIU2xVaEJJd0VyL3JuUTRmV3pwbzVjK3dOMEhSMFpPUlhVRTYrcThGUURuOVlCNkdTNzFHbFMrNnNIdld3dk5Pbjc3OTQ4ZUpJRzFCNWFlbFYxVW5BMmd4NmZiUU43cmU5a2pJMFpnOTM5L0tJeUlpUC9tZlZxcFB0NVFkRCt4d2IvQTZLb05Sd0E0T0NjaWRQbnJ3R01sTGRpOVZ3YkgxMkZXSUR3SVpVOU4xMzM3MmVuWlYxOStSSms4YWs5T3YzYUd4MDlOdndqMGU5UFQxTHJNcXhnYmRjU1NrSWNmV25zckx1aFJLRWdsVnNiR3dSQk44c1Z3cXRHdXhEQTl1VEg3UXdhdWNOMUlFRTFQdlNnSlQrajI1NDdiVi9ZRTlvdDZ1RW9CdHZURXRiNHVmcld5eVdPTTBMYnI2aGQxTFNFbHBKN1J5YUFDNHBMam9pZ0VGUWRwdEhQekQrQUZWV24wOCsrV1F3b3F6eFNQWnVnVUJENEhva2xVS0tSaW9yS3dlaHBFSWJmQldPS3kvb2RMcGltRlYzOGRvaWw0V3c4SWFDTTJmQ0FYY1d2OStzYVdFb01URXhuMk5EZjIvQWdBRWQ1b1B5ekFtYzk3OVlWVldWanNCR2tDT3RHTXh4R3dxUG4wRmVIYUp0YjRWd3lDM3NubzJEbWVtT08rNG93d0hNOWhQSGo4KytiZXpZdTBPQ2d4VWJIUTBKRzcwZnlpV0NuMzd1dHRzcWtMY2NFMmV5TkdwYVRhZ0dCT3pjdTNjSzFZTTZOQk1ua2VqYk9sUnJnNjUzTlVJR1BETDBsekJ2NGF0K01qN2tVa1VqaGcxYmduZktyeVNjSEo5Q0liQis3dWFiYis0SHpjOUlUVTN0VHMrT2FKRnlFTnJ0RHdrTlhZcjhSUUVLWkJ6Sm94NlB4cVdsR2JzRkIzOXN3UG04M1BrMm8vNlRmK0hDd3pVMU5hUGFxcGtwbUxTakF5RUZqd2hySUVMZmRtM21haXhRWmE5SVNFNmVoNk9DVWc4M3R3WVVUWmZoUTRwTU5WaG4reFFLUWRrN0ZBbmYwemw1ZVM4VUZoWE5RNm02Myt6WnN6M2JJcWpoK1JvMXpVSHdrSFdUNWFBRVJFYW5wbjZQSXVKNXhMa1Nrc2g3R09wQVhjRjMrZDY5ZS90U3hWWUM4S3M4NEpUUjRHSUtEZzc5Qks2bGczOFJMQjNJRi8vKzk3N3dzTEQzZ29LQzlxeGF2dndkV2psU2lQWTlTZllRVkd1OVRwMDY5UStjcTk4T0s2TGkyY053T1NtNDN3akZIRVEyWFlpUEYycWVmdnBweWsyd2VIaHV5WklsMmhNblRuVEZzZTk0Wk9FSzdxNTZmZFhnd1lNcjhWMlg4QTVuN01XNzkreDVwN3k4ZkhHajBhaVhLQkZLd21IWERWRFdDeDk5OU5HL2dIZDA2TkNoWmQ3ZTNvM2dTZmc4K09rUEhEamdpVDBuWU5xMGFlZG56cHpwdEhzZ0czQjFNWmk2aHdUdHRIZVNxWmhBR3gza0lSNTk5TkhucStyckE5TFMwcHcrTExOSHRrVWhqenp5aU9INHlaTjNYTGgwNlJFNnd0V2duTkdNTEJ5NXc1RDZ1cnArK0t3bUF4WFpyMUgreUhyM3d3L0xvUmhUWXA4K0doOFBEOStxNnVxYmNVSjJqNWsrTUlPbDJ4b0d5M0FRbFFsaFhvTWJFcnJSWjE2NGNPRWJPUFc3SFRnRHlQZTJLQVh3ZEZwNHViQndlRTFkWFU4YzNYNlM4Y01QK3lESGkwZzBXV2xGaFJuRkluOG9Jd25qdXdHQnhRb1EvY25HciswcktneDZiVkZSV1ZtSFRndnQwWC9oaFJjdTRoMzlycnUxS0tTc3JDemgzTm16ejZCRTRFSHVRMmpXU0tHaW9zSVZlOG9ZN0JGajhHRkJNWVJZM09EcVd0OE1DeS9oK1pEYW1wb2d1Q1g4ZFVLck1tamRJbWN4aFFZRmJjT3RaT2xnbFZ4RzBMQzhvYjcrWld6bXdRUXJWZ29wcWJ5c0xMQzZxbW8yVnRLOUtLc1VsM2w0R0hFOHdLSDA0b3U2a2grVlAweEdZek1TejFuUFAvOTh1VERlTnY0aGIrTG43ZlBUdnQyN2o1T3gvQkZiaTBLd0trSWgxQ1lVK3N4d1BZSmtiVU1tUVpQUTZCd0RQeXFIZElQaTZNc0dLbmtJbWJkY0dVUUFpV1FtUG43Ymlza1R1cVRocUhNYjNGRXNLcStQTnpRMWRaT3NGRUFTUGFwN1laT25nQ0N5b2h3eWh4REZncnh5OWVwZmpoMDc5ZzNHOEFhdFBBa0RsUWY2RXhJa3JHRUlWMjFUVTRINmZidGFUUHJUVHovZDBUczVlUnBxTDI5NGQrbHlSV2RWZ2tTU1pGVzJINDJiQkVTcmd2cXNqUlNraDd0RExlZkhuckd4czFldlhuM1o5azU4aFFDTnNPNDFjVDE3UGh6WXRlcys0UndHQUJKK2hHRGx4NEZtQ3k5ckgvWTRTanlmU1UxTnZabjJNekY5MVh1TURYK1Q0b3BxZE51d3FnUisrODZXRlVJV2hra2R2T2VlZTRxT0h6LytDMHJLdHlIVFRrR05LWUEyYXhLMHVOR01wRDA0aklGeTRLYnFrTUh1UTB5KzVwdHZ2amtBdW5Ld0ZqSjMzWFVYVlpTM1FxQ1YrSWJwSHF5Nkc3RjNoTUFWdHNDb1NhNkZJQlFEaXcvR2NjQ0VqSXlNYjRIVWl0aEN3WFlEUTlIcm1MdW5POVdYSE1EWjRIK2ZhNHRDaUwxVmVPZnhhYytHeHg5Ly9NaTUvUHdoY0dXREVHWEZ3VlYxeDNkTjN2amh2NEdtdnlERGY5c01nWkRBa0tFMjQxZEtKNDZJaUE1RWhvZC91WFBuemtPa1pLTHJxQUhHQ0tWOGh3Z3ZQenMzOTBmc0hUY2hzdXVEWHlnK3RITzE4U0wzU0t1RmtrcjZnVitqd2RXMUVFVytZOGdCOWloNGNQUTNhaFoxQWh6d2VvYVZtSXVhM0xzT3hvVlhVcmRJcTVJNlVVMndFRk13Y3E0REpDU3lKaXlhQitZdVNZUVZRQVNJWTFrcWt4eUFZbzRzV3JRbzV2ejU4ejBSMlVRMm0wd1JjQlArRUlaSFhXMnR4aDBmSmdPdUZ0WGdVcmk0MHppZ3lzYlg4ci9nb09zYVRjelpCbGlpY3hxRHk3L3p6anYzSTVMcmg4MCtycWE2T2h6UlZBQTJkNWVHNW1ZZUlUU0hKSXdVV0k0QUk5L1gyenN2TWpMeXA2MWJ0MmFEUm92Vkl4RGdNYWJEV0dsRnRPL3A5UWJlejhjSFZkcm83VGhHUHZUVlYxK3BEZzBHVll2UytsRngrQTVlRExoMHhLejZ3WjhxSVpWT0dNTnBqSkVFUm5NVkdwNDVmeCtmSzRnNGJWMnEvemRVeTB1cllyTFJrWTJCNlI1KytHRnZuQXg2b2RUaGNlSENCUTMyR3g2Q3FjWG5NSlg0ZTR3SzBEZmhvTDhGdjcwM3dLZWM0Z1I0bmNLblFGMlFJSFlGcndCOHllRlMyOURBdTN0NmNyRXhNVWIwbFVNUlJXKysrV1kxOGNSUHpzcUlMODdYWTkveGFDZ3BJVGZGOStxVlZBeEZuQ1Y0T2JEdEdRZHJGeUQ0ZERsQUYzd3RpZjRDRzF4SHJqaFgzd2k4QUxQSWhXTWVIRDUreU1FWG94MGgyWW5US1lGT0NYUktvRk1DblJLUVNPQi9BZnE4T0xuSDJhb3lBQUFBQUVsRlRrU3VRbUNDIi8+CjwvZGVmcz4KPC9zdmc+
+description: "SCIM 2.0 as a System of Record"
+type: "Okta-1.0.1"
+adapterConfig: "eyJyZXF1ZXN0VGltZW91dFNlY29uZHMiOiAxMCwgImFwaVZlcnNpb24iOiAidjEifQ=="
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+pushType: "SCIM2.0"
+address: "sgnl-training.oktapreview.com" 
+deliveryMethod: "entityPush"
+auth:
+  - basic:
+      username: "{{Input Required: Username}}"
+      password: "{{Input Required: API Token}}"
+  - oAuth2ClientCredentials:
+      clientId: "{{Input Required: Client-ID}}"
+      clientSecret: "{{Input Required: Client-Secret}}"
+      tokenUrl: "{{Input Required: AuthTokenURL}}"
+      scope: "{{Input Required: Scope}}"
+      authStyle: AutoDetect
+  - bearer:
+      authToken: "{{Input Required: token}}"
+entities:
+  User:
+    displayName: Users
+    externalId: User
+    pushExternalId: User
+    description: User entity in SCIM
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        pushExternalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: userName
+        #externalId: profile__login
+        externalId: userName
+        pushExternalId: userName
+        type: String
+        indexed: true
+      - name: familyName
+        #externalId: profile__lastName
+        externalId: $.name.familyName
+        pushExternalId: $.name.familyName
+        type: String
+      - name: givenName
+        #externalId: profile__firstName
+        externalId: $.name.givenName
+        pushExternalId: $.name.givenName
+        type: String
+      - name: middleName
+        #externalId: profile__middleName
+        externalId: $.name.middleName
+        pushExternalId: $.name.middleName
+        type: String
+      - name: email
+        #externalId: profile__middleName
+        externalId: $.emails[0].value
+        pushExternalId: $.emails[0].value
+        type: String
+        #Need to fix path
+      - name: honorificPrefix
+        externalId: $.name.honorificPrefix
+        pushExternalId: $.name.honorificPrefix
+        type: String
+      - name: honorificSuffix
+        externalId: $.name.honorificSuffix
+        pushExternalId: $.name.honorificSuffix
+        type: String
+      - name: displayName
+        externalId: displayName
+        pushExternalId: displayName
+        type: String
+      - name: nickName
+        externalId: nickName
+        pushExternalId: nickName
+        type: String
+      - name: profileUrl
+        externalId: profileUrl
+        pushExternalId: profileUrl
+        type: String
+      - name: userType
+        externalId: userType
+        pushExternalId: userType
+        type: String
+      - name: title
+        externalId: title
+        pushExternalId: title
+        type: String
+      - name: department
+        externalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["department"]
+        pushExternalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["department"]
+        type: String
+      - name: costCenter
+        externalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["costCenter"]
+        pushExternalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["costCenter"]
+        type: String
+      - name: organization
+        externalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["organization"]
+        pushExternalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["organization"]
+        type: String
+      - name: division
+        externalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["division"]
+        pushExternalId: $["urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"]["division"]
+        type: String
+      - name: preferredLanguage
+        externalId: preferredLanguage
+        pushExternalId: preferredLanguage
+        type: String
+      - name: locale
+        externalId: locale
+        pushExternalId: locale
+        type: String
+      - name: timezone
+        externalId: timezone
+        pushExternalId: timezone
+        type: String
+      - name: active
+        externalId: active
+        pushExternalId: active
+        type: Bool
+        ## Note: Had to add this mapping inside Okta: variable was active, namespace urn:ietf:params:scim:schemas:core:2.0:User
+
+      # Meta
+      - name: resourceType
+        externalId: $.meta.resourceType
+        pushExternalId: $.meta.resourceType
+        type: String
+      - name: created
+        externalId: $.meta.created
+        pushExternalId: $.meta.created
+        type: DateTime
+      - name: lastModified
+        externalId: $.meta.lastModified
+        pushExternalId: $.meta.lastModified
+        type: DateTime
+      - name: version
+        externalId: $.meta.version
+        pushExternalId: $.meta.version
+        type: String
+      - name: location
+        externalId: $.meta.location
+        pushExternalId: $.meta.location
+        type: String
+
+  Groups:
+    displayName: Groups
+    externalId: Group
+    pushExternalId: Group
+    description: Group entity in SCIM
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: lastModified
+        externalId: $.meta.lastModified
+        pushExternalId: $.meta.lastModified
+        type: DateTime
+        attributeAlias: 174e5175-fe36-4ae4-bf7d-befecc4a6ae0
+      - name: location
+        externalId: $.meta.location
+        pushExternalId: $.meta.location
+        type: String
+        attributeAlias: 5a8327d6-f040-4ef9-9ac1-32cda9e004b7
+      - name: id
+        externalId: id
+        pushExternalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+        attributeAlias: 658b4920-2bc9-40ed-8203-029dd5bbeed2
+      - name: resourceType
+        externalId: $.meta.resourceType
+        pushExternalId: $.meta.resourceType
+        type: String
+        attributeAlias: 6678de30-8130-4dfa-ae10-444df27696c7
+      - name: schemas
+        externalId: schemas
+        pushExternalId: schemas
+        description: ""
+        type: String
+        indexed: false
+        uniqueId: false
+        attributeAlias: 6df1bd2d-2415-4e30-a318-32e36dd1fb8c
+        list: true
+      - name: displayName
+        externalId: displayName
+        pushExternalId: displayName
+        type: String
+        attributeAlias: 7bb81a13-c433-4f3f-a762-87b6e2e61d48
+      - name: version
+        externalId: $.meta.version
+        pushExternalId: $.meta.version
+        type: String
+        attributeAlias: affafb8b-07d3-4313-b4b2-55d77b627125
+      - name: created
+        externalId: $.meta.created
+        pushExternalId: $.meta.created
+        type: DateTime
+
+  GroupMember:
+    parent: Group
+    displayName: Group Members
+    externalId: members
+    pushExternalId: members
+    description: Entity representing the SCIM groups each user belongs to
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: value
+        externalId: value
+        pushExternalId: value
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: display
+        externalId: display
+        pushExternalId: display
+        type: String
+      - name: type
+        externalId: type
+        pushExternalId: type
+        type: String
+      - name: ref
+        externalId: '$..["$ref"]'
+        pushExternalId: '$..["$ref"]'
+        type: String
+
+relationships:
+  # User to GroupMember relationship
+  UserToGroupMember:
+    name: UserToGroupMember
+    displayName: User to Group Member
+    fromAttribute: User.id
+    toAttribute: members.value  # value contains the User ID
+
+  # Parent-child relationships
+  ParentGroupOfGroupMember:
+    displayName: ParentGroupOfGroupMember
+    name: partent
+    childEntity: members    
+
+  # Traverse from User to their Groups
+  UserGroups:
+    displayName: UserGroup
+    name: UserGroup
+    path:
+      - relationship: UserToGroupMember
+        direction: Forward
+      - relationship: ParentGroupOfGroupMember  
+        direction: Forward  # This goes from GroupMember to its parent Group
+        
+
+ 
