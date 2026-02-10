@@ -358,9 +358,6 @@ entities:
       - name: resolvedBy
         externalId: resolved_by
         type: String
-      - name: shortDescription
-        externalId: short_description
-        type: String
       - name: stage
         externalId: stage
         type: String
