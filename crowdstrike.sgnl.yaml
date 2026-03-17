@@ -1,28 +1,23 @@
 displayName: "CrowdStrike"
 icon: PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTU1Ljg5OTEgNTZDNTQuMjY1IDUyLjI2IDUwLjk4MjcgNDcuNDYxNiAzOC4xMjcyIDQwLjYwOTJDMzIuMTk3OSAzNy4zMTI3IDIyLjA2OTUgMzIuMjM3NSAxMi45NjMzIDIyLjU4NTZDMTMuNzg5IDI2LjA2NzYgMTguMDE5NyAzMy43MTkgMzYuMjA4NCA0My4yNjcxQzQxLjI0NzUgNDYuMDI0MSA0OS43Njg2IDQ4LjYwOTcgNTUuODk5MSA1NS45ODc0IiBmaWxsPSIjRDgyRTIwIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNTUuMDgxMyA0OS41OTlDNTMuNTMwNiA0NS4xNzk2IDUwLjczMTEgMzkuNTIwOSAzNy40NTA5IDMxLjExOTNDMzAuOTg1MyAyNi44ODIzIDIxLjQ4NzYgMjEuNTYxNyA5IDhDOS44OTMzMiAxMS42NTY2IDEzLjg0MDkgMjEuMTY1NCAzMy43MzkyIDMzLjUwOThDNDAuMjc1NSAzNy45Mzg3IDQ4LjcxMTcgNDAuNjcwNSA1NS4wODEzIDQ5LjU5OVoiIGZpbGw9IiNEODJFMjAiLz4KPC9zdmc+Cg==
 description: "CrowdStrike as a System of Record"
-address: "api.{{Input Required: API Region (e.g. us-1)}}.crowdstrike.com"
+address: "none"
 defaultSyncFrequency: HOURLY
 defaultSyncMinInterval: 1
 defaultApiCallFrequency: SECONDLY
 defaultApiCallMinInterval: 1
-type: "CrowdStrike-1.0.0"
+type: "S3-1.0.0"
 # Example Config:
 # {
 #     "apiVersion": "v1",
 #     "archived": false,
 #     "enabled": true
 # }
-adapterConfig: "ewogICAgImFwaVZlcnNpb24iOiAidjEiLAogICAgImFyY2hpdmVkIjogZmFsc2UsCiAgICAiZW5hYmxlZCI6IHRydWUKfQ=="
-# All auth mechanisms specified below must be supported by the specified Adapter.
+adapterConfig: "ewogICJyZWdpb24iOiAidXMtZWFzdC0yIiwKICAiYnVja2V0IjogInNnbmwtdHJhaW5pbmctc29yLWluZ2VzdCIKfQo="
 auth:
-  - oAuth2ClientCredentials:
-      clientId: "{{Input Required: Client-ID}}"
-      tokenUrl: "https://api.{{Input Required: API Region (e.g. us-1)}}.crowdstrike.com/oauth2/token"
-      authStyle: "AutoDetect"
-      clientSecret: "{{Input Required: Client-Secret}}"
-  - bearer:
-      authToken: "{{Input Required: AuthToken}}"
+  - basic:
+      username: "{{Input Required: Username}}"
+      password: "{{Input Required: Password}}"
 entities:
   User:
     displayName: User
