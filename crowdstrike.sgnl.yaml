@@ -13,7 +13,7 @@ type: "S3-1.0.0"
 #     "archived": false,
 #     "enabled": true
 # }
-adapterConfig: "ewogICJyZWdpb24iOiAidXMtZWFzdC0yIiwKICAiYnVja2V0IjogInNnbmwtdHJhaW5pbmctc29yLWluZ2VzdCIKfQo="
+adapterConfig: "ewogICJyZWdpb24iOiAidXMtZWFzdC0yIiwKICAiYnVja2V0IjogInNnbmwtdHJhaW5pbmctc29yLWluZ2VzdCIsCiAgInByZWZpeCI6ICJjcm93ZHN0cmlrZSIKfQ=="
 auth:
   - basic:
       username: "{{Input Required: Username}}"
