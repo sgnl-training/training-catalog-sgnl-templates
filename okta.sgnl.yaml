@@ -62,99 +62,99 @@ entities:
       - name: type__id
         externalId: type__id
         type: String
-      - name: profile__login
+      - name: login
         externalId: profile__login
         type: String
-      - name: profile__email
+      - name: email
         externalId: profile__email
         type: String
         indexed: true
-      - name: profile__secondEmail
+      - name: secondEmail
         externalId: profile__secondEmail
         type: String
-      - name: profile__firstName
+      - name: firstName
         externalId: profile__firstName
         type: String
-      - name: profile__lastName
+      - name: lastName
         externalId: profile__lastName
         type: String
-      - name: profile__middleName
+      - name: middleName
         externalId: profile__middleName
         type: String
-      - name: profile__honorificPrefix
+      - name: honorificPrefix
         externalId: profile__honorificPrefix
         type: String
-      - name: profile__honorificSuffix
+      - name: honorificSuffix
         externalId: profile__honorificSuffix
         type: String
-      - name: profile__title
+      - name: title
         externalId: profile__title
         type: String
-      - name: profile__displayName
+      - name: displayName
         externalId: profile__displayName
         type: String
-      - name: profile__nickName
+      - name: nickName
         externalId: profile__nickName
         type: String
-      - name: profile__profileUrl
+      - name: profileUrl
         externalId: profile__profileUrl
         type: String
-      - name: profile__primaryPhone
+      - name: primaryPhone
         externalId: profile__primaryPhone
         type: String
-      - name: profile__mobilePhone
+      - name: mobilePhone
         externalId: profile__mobilePhone
         type: String
-      - name: profile__streetAddress
+      - name: streetAddress
         externalId: profile__streetAddress
         type: String
-      - name: profile__city
+      - name: city
         externalId: profile__city
         type: String
-      - name: profile__state
+      - name: state
         externalId: profile__state
         type: String
-      - name: profile__zipCode
+      - name: zipCode
         externalId: profile__zipCode
         type: String
-      - name: profile__countryCode
+      - name: countryCode
         externalId: profile__countryCode
         type: String
-      - name: profile__postalAddress
+      - name: postalAddress
         externalId: profile__postalAddress
         type: String
-      - name: profile__preferredLanguage
+      - name: preferredLanguage
         externalId: profile__preferredLanguage
         type: String
-      - name: profile__locale
+      - name: locale
         externalId: profile__locale
         type: String
-      - name: profile__timezone
+      - name: timezone
         externalId: profile__timezone
         type: String
-      - name: profile__userType
+      - name: userType
         externalId: profile__userType
         type: String
-      - name: profile__employeeNumber
+      - name: employeeNumber
         externalId: profile__employeeNumber
         type: String
-      - name: profile__costCenter
+      - name: costCenter
         externalId: profile__costCenter
         type: String
-      - name: profile__organization
+      - name: organization
         externalId: profile__organization
         type: String
-      - name: profile__division
+      - name: division
         externalId: profile__division
         type: String
-      - name: profile__department
+      - name: department
         externalId: profile__department
         type: String
-      - name: profile__managerId
+      - name: managerId
         externalId: profile__managerId
         type: String
         indexed: true
-      - name: profile__manager
+      - name: manager
         externalId: profile__manager
         type: String
   Group:
@@ -185,11 +185,11 @@ entities:
       - name: type
         externalId: type
         type: String
-      - name: profile__name
+      - name: name
         externalId: profile__name
         type: String
         indexed: true
-      - name: profile__description
+      - name: description
         externalId: profile__description
         type: String
   GroupMember:
