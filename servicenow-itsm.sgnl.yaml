@@ -686,11 +686,6 @@ relationships:
     displayName: Change Request Assigned To
     fromAttribute: change_request.assigned_to
     toAttribute: sys_user.sys_id
-  ChangeRequestAssignedToGroup:
-    name: AssignedToGroup
-    displayName: Change Request Assigned To Group
-    fromAttribute: change_request.assignment_group
-    toAttribute: sys_user_group.sys_id
   ChangeRequestLinkedTo:
     name: ChangeRequestLinkedTo
     displayName: ChangeRequest Linked To
