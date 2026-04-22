@@ -627,6 +627,7 @@ entities:
         externalId: last_login_user_sid
         type: String
         indexed: true
+        attributeAlias: LastLoginUserSid
       - name: platformName
         externalId: platform_name
         type: String
@@ -767,27 +768,27 @@ relationships:
   DeviceCompromisedUser:
     displayName: DeviceCompromisedUser
     name: DeviceCompromisedUser
-    fromAttribute: endpoint_protection_device.last_login_user_sid
+    fromAttribute: LastLoginUserSid
     toAttribute: UserObjectSid
   # Parent relationships
   ParentOfUserRiskFactor:
     displayName: ParentOfUserRiskFactor
-    childEntity: $.riskFactors
+    childEntity: UserRiskFactor
   ParentOfUserAccountActiveDirectory:
     displayName: ParentOfUserAccountActiveDirectory
-    childEntity: userAccountActiveDirectory
+    childEntity: UserAccountActiveDirectory
   ParentOfEndpointRiskFactor:
     displayName: ParentOfEndpointRiskFactor
-    childEntity: $.riskFactors
+    childEntity: EndpointRiskFactor
   ParentOfEndpointAccountActiveDirectory:
     displayName: ParentOfEndpointAccountActiveDirectory
-    childEntity: endpointAccountActiveDirectory
+    childEntity: EndpointAccountActiveDirectory
   ParentOfIncidentCompromisedEntity:
     displayName: ParentOfIncidentCompromisedEntity
-    childEntity: $.compromisedEntities
+    childEntity: IncidentCompromisedEntity
   ParentOfIncidentAlertEvent:
     displayName: ParentOfIncidentAlertEvent
-    childEntity: $.alertEvents
+    childEntity: IncidentAlertEvent
   ParentOfIncidentAlertEventEntity:
     displayName: ParentOfIncidentAlertEventEntity
-    childEntity: $.entities
+    childEntity: IncidentAlertEventEntity
