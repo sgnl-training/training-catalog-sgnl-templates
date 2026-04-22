@@ -773,22 +773,22 @@ relationships:
   # Parent relationships
   ParentOfUserRiskFactor:
     displayName: ParentOfUserRiskFactor
-    childEntity: $.riskFactors
+    childEntity: UserRiskFactor
   ParentOfUserAccountActiveDirectory:
     displayName: ParentOfUserAccountActiveDirectory
-    childEntity: userAccountActiveDirectory
+    childEntity: UserAccountActiveDirectory
   ParentOfEndpointRiskFactor:
     displayName: ParentOfEndpointRiskFactor
-    childEntity: $.riskFactors
+    childEntity: EndpointRiskFactor
   ParentOfEndpointAccountActiveDirectory:
     displayName: ParentOfEndpointAccountActiveDirectory
-    childEntity: endpointAccountActiveDirectory
+    childEntity: EndpointAccountActiveDirectory
   ParentOfIncidentCompromisedEntity:
     displayName: ParentOfIncidentCompromisedEntity
-    childEntity: $.compromisedEntities
+    childEntity: IncidentCompromisedEntity
   ParentOfIncidentAlertEvent:
     displayName: ParentOfIncidentAlertEvent
-    childEntity: $.alertEvents
+    childEntity: IncidentAlertEvent
   ParentOfIncidentAlertEventEntity:
     displayName: ParentOfIncidentAlertEventEntity
-    childEntity: $.entities
+    childEntity: IncidentAlertEventEntity
