@@ -110,7 +110,7 @@ entities:
         indexed: true
         uniqueId: false
         list: false
-UserRiskFactor:
+  UserRiskFactor:
     parent: user
     displayName: UserRiskFactor
     externalId: $.riskFactors
