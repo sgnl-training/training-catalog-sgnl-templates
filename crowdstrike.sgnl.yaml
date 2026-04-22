@@ -449,7 +449,7 @@ entities:
     parent: incident
     displayName: IncidentCompromisedEntity
     externalId: $.compromisedEntities
-    description: EndpointRiskFactor represents the risk factor associated with an endpoint.
+    description: IncidentCompromisedEntity represents the compromised entity associated with an incident.
     pageSize: 100
     pagesOrderedById: false
     entityAlias: compromisedEntity
@@ -594,7 +594,7 @@ entities:
   Device:
     displayName: Device
     externalId: endpoint_protection_device
-    description: Device represents a device in the CrowdStrike platform.. This is fetched from the Endpoint Protection module.
+    description: Device represents a device in the CrowdStrike platform. This is fetched from the Endpoint Protection module.
     pageSize: 100
     attributes:
       - name: deviceId
