@@ -626,6 +626,7 @@ entities:
       - name: lastLoginUserSid
         externalId: last_login_user_sid
         type: String
+        indexed: true
       - name: platformName
         externalId: platform_name
         type: String
@@ -763,6 +764,11 @@ relationships:
     name: CompromisedEndpointEntity
     fromAttribute: compromisedEntityId
     toAttribute: endpoint.entityId
+  DeviceCompromisedUser:
+    displayName: DeviceCompromisedUser
+    name: DeviceCompromisedUser
+    fromAttribute: endpoint_protection_device.last_login_user_sid
+    toAttribute: UserObjectSid
   # Parent relationships
   ParentOfUserRiskFactor:
     displayName: ParentOfUserRiskFactor
