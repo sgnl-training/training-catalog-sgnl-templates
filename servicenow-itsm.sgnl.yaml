@@ -688,7 +688,7 @@ relationships:
     toAttribute: sys_user.sys_id
   ChangeRequestLinkedTo:
     name: ChangeRequestLinkedTo
-    displayName: ChangeRequest Linked To
+    displayName: Change Request Linked To
     fromAttribute: change_request.cmdb_ci
     toAttribute: cmdb_ci.sys_id
   ProblemAssignedTo:
