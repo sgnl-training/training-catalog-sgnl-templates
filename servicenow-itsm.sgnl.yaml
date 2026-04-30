@@ -339,13 +339,13 @@ entities:
   ChangeRequest:
     displayName: ChangeRequest
     externalId: change_request
-    description: Change Request Entity in ServiceNow
+    description: ChangeRequest Entity in ServiceNow
     pageSize: 150
     pagesOrderedById: true
     attributes:
       - name: sysId
         externalId: sys_id
-        description: ID of the change request
+        description: ID of the ChangeRequest
         type: String
         indexed: true
         uniqueId: true
@@ -653,7 +653,7 @@ relationships:
     toAttribute: change_request.sys_id
   IncidentChangeRequest:
     name: ChangeRequest
-    displayName: Incident Change Request
+    displayName: Incident ChangeRequest
     fromAttribute: incident.rfc
     toAttribute: change_request.sys_id
   IncidentProblem:
@@ -678,17 +678,17 @@ relationships:
     toAttribute: cmdb_ci.sys_id
   ChangeRequestedBy:
     name: RequestedBy
-    displayName: Change Requested By
+    displayName: ChangeRequest Requested By
     fromAttribute: change_request.requested_by
     toAttribute: sys_user.sys_id
   ChangeRequestAssignedTo:
     name: AssignedToUser
-    displayName: Change Request Assigned To
+    displayName: ChangeRequest Assigned To
     fromAttribute: change_request.assigned_to
     toAttribute: sys_user.sys_id
   ChangeRequestLinkedTo:
     name: ChangeRequestLinkedTo
-    displayName: Change Request Linked To
+    displayName: ChangeRequest Linked To
     fromAttribute: change_request.cmdb_ci
     toAttribute: cmdb_ci.sys_id
   ProblemAssignedTo:
@@ -703,7 +703,7 @@ relationships:
     toAttribute: sys_user_group.sys_id
   ProblemChangeRequest:
     name: ProblemChangeRequest
-    displayName: Problem Change Request
+    displayName: Problem ChangeRequest
     fromAttribute: problem.rfc
     toAttribute: change_request.sys_id
   UserInGroup:
